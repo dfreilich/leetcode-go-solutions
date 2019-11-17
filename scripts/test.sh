@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -uo pipefail
 
-cd "$( dirname "${BASH_SOURCE[0]}" )/.."
+cd "$( dirname "${BASH_SOURCE[0]}" )/.." || exit
 
-echo "Run Leetcode Unit Tests"
-go test -mod=vendor ./... -v -run Unit
+echo "Run Leetcode Tests"
+go test -mod=vendor ./... -v
 exit_code=$?
 
 if [ "$exit_code" != "0" ]; then
