@@ -25,4 +25,10 @@ func testTwoSum(t *testing.T, when spec.G, it spec.S) {
 		})
 	})
 
+	when("nums are [2, 7, 11, 15], target is 9", func() {
+		it("returns 0,1", func() {
+			Expect(TwoSum([]int{2, 7, 11, 15}, 9)).To(Equal([]int{0, 1}))
+		})
+	})
+
 }

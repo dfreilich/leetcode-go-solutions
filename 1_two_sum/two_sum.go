@@ -15,3 +15,14 @@ func main() {
 func Run() error {
 	return nil
 }
+
+func TwoSum(nums []int, target int) []int {
+	m := make(map[int]int, len(nums)-1)
+	for j, a := range nums {
+		if i, ok := m[target-a]; ok {
+			return []int{i, j}
+		}
+		m[a] = j
+	}
+	return []int{}
+}
